@@ -81,7 +81,7 @@ section{padding:110px 0;border-top:1px solid #1c1c1e}.section-head{text-align:ce
 .features{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#303033;border:1px solid #303033;border-radius:24px;overflow:hidden}.feature{background:#0b0b0b;padding:38px 30px;min-height:220px;transition:background .25s,transform .25s}.feature:hover{background:#151515;transform:translateY(-2px)}.feature .glyph{font-family:var(--mono);color:var(--blue);font-size:12px;margin-bottom:24px}.feature h3{font-size:21px;letter-spacing:-.02em;margin:0 0 10px}.feature p{font-size:15px;color:var(--muted);line-height:1.55;margin:0}
 .status-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#303033;border:1px solid #303033;border-radius:24px;overflow:hidden;margin-top:35px}.status-item{background:#0b0b0b;padding:25px}.status-item .label{font-size:11px;color:#777;letter-spacing:.04em;margin-bottom:7px}.status-item .val{font-family:var(--mono);font-size:14px}.status-item .val.amber{color:#ffb454}.status-item .val.green{color:#70d7ff}
 .cta-section{padding:120px 0;text-align:center}.cta-box{background:linear-gradient(135deg,#161616,#0a0a0a);border:1px solid #303033;border-radius:24px;padding:70px 36px;position:relative;overflow:hidden}.cta-box:before{content:"";position:absolute;width:500px;height:500px;right:-220px;top:-260px;background:radial-gradient(circle,rgba(41,151,255,.2),transparent 65%)}.cta-box h2,.cta-box p,.notify{position:relative}.cta-box p{color:var(--muted);max-width:580px;margin:0 auto 28px;font-size:18px}.notify{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.notify input{min-height:46px;width:min(360px,100%);border-radius:980px;border:1px solid #424245;background:#111;color:#fff;padding:0 17px;font-family:var(--sans)}.notify input:focus{outline:2px solid var(--blue);outline-offset:2px}
-footer{border-top:1px solid #1c1c1e;padding:32px 0 50px}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:12px;color:#777}.footer-links{display:flex;gap:20px}.footer-links a{text-decoration:none}.footer-links a:hover{color:#fff}.footer-legal{width:100%;color:#666}
+.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,380px));gap:22px;justify-content:center}.price-card{background:#0b0b0b;border:1px solid #303033;border-radius:24px;padding:42px 34px;text-align:center;transition:background .25s,transform .25s}.price-card:hover{background:#151515;transform:translateY(-2px)}.price-card .glyph{font-family:var(--mono);color:var(--blue);font-size:12px;margin-bottom:24px}.price-card h3{font-size:21px;letter-spacing:-.02em;margin:0 0 14px}.price-card .price{font-size:56px;font-weight:600;letter-spacing:-.04em;margin:0 0 14px;line-height:1}.price-card .price span{font-size:18px;font-weight:400;color:var(--muted);letter-spacing:0}.price-card .price-sub{font-size:15px;color:var(--muted);line-height:1.55;margin:0 0 28px;min-height:70px}.price-card-featured{border-color:#48484d}.checkout-note{text-align:center;font-size:13px;color:#777;margin-top:28px}@media(max-width:480px){.price-card .price{font-size:44px}}footer{border-top:1px solid #1c1c1e;padding:32px 0 50px}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:12px;color:#777}.footer-links{display:flex;gap:20px}.footer-links a{text-decoration:none}.footer-links a:hover{color:#fff}.footer-legal{width:100%;color:#666}
 a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
 @media(max-width:760px){.nav-links{display:none}.hero{padding-top:110px}h1{font-size:clamp(42px,13vw,64px)}.lede{font-size:18px}.features{grid-template-columns:1fr}.status-strip{grid-template-columns:1fr 1fr}.stage{grid-template-columns:1fr;gap:8px}section{padding:80px 0}}
 @media(max-width:480px){.wrap{padding:0 18px}.status-strip{grid-template-columns:1fr}.cta-box{padding:48px 22px}.term-body{padding:18px;font-size:11px}}
@@ -151,6 +151,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
       <a href="#toolset">Toolkit</a>
       <a href="#capabilities">Capabilities</a>
       <a href="#license">License</a>
+      <a href="#get">Get a license</a>
     </div>
     <span class="nav-status">pre-release</span>
   </nav>
@@ -514,7 +515,7 @@ collaboration with Privacy+ Technologies Inc.</pre>
       <div class="feature">
         <div class="glyph">[ leg ]</div>
         <h3>License</h3>
-        <p>Proprietary software. All rights reserved by Privacy+ Technologies Inc. Reproduction is forbidden, and creating your own version of Poke is expressly prohibited. Deployment and use require a purchased commercial Sovereign Workstation Use License, issued in three tiers: Trial, Standard, and Premium. Free use is reserved for the owner alone.</p>
+        <p>Proprietary software. All rights reserved by Privacy+ Technologies Inc. Reproduction is forbidden, and creating your own version of Poke is expressly prohibited. Deployment and use require a purchased commercial Sovereign Workstation Use License, issued as a monthly subscription or a one-time purchase (see pricing below). Free use is reserved for the owner alone.</p>
       </div>
       <div class="feature">
         <div class="glyph">[ ship ]</div>
@@ -524,22 +525,49 @@ collaboration with Privacy+ Technologies Inc.</pre>
     </div>
     <div class="status-strip">
       <div class="status-item">
-        <div class="label">TRIAL</div>
-        <div class="val green">$1,800 · starting price</div>
+        <div class="label">MONTHLY</div>
+        <div class="val green">$29 / month</div>
       </div>
       <div class="status-item">
-        <div class="label">STANDARD</div>
-        <div class="val">Priced per license</div>
+        <div class="label">ONE-TIME</div>
+        <div class="val green">$199 · flat</div>
       </div>
       <div class="status-item">
-        <div class="label">PREMIUM</div>
-        <div class="val">Priced per license</div>
+        <div class="label">WORKSTATION</div>
+        <div class="val">Included with license</div>
       </div>
       <div class="status-item">
-        <div class="label">SESSIONS</div>
-        <div class="val green">1h 35m · or set duration</div>
+        <div class="label">HOSTED USE</div>
+        <div class="val amber">Free · unmodified .skill</div>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="get">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="section-tag">// get your license</p>
+      <h2>Checkout, in two clicks.</h2>
+      <p class="section-sub">A Sovereign Workstation Use License, processed securely by Stripe. Every paid license includes an ephemeral workstation host: Poke runs on its own machine, not yours. Hosted AI platform use stays free with the unmodified .skill file.</p>
+    </div>
+    <div class="pricing">
+      <div class="price-card">
+        <div class="glyph">[ sub ]</div>
+        <h3>Monthly license</h3>
+        <p class="price">$29<span> / month</span></p>
+        <p class="price-sub">The full poke-core runtime, an ephemeral workstation host for Poke to run on, and every update while your subscription is active. Cancel anytime.</p>
+        <a class="btn btn-primary" data-press href="https://buy.stripe.com/test_00w8wRcmB0oWfJ20hZeIw00">Subscribe →</a>
+      </div>
+      <div class="price-card price-card-featured">
+        <div class="glyph">[ own ]</div>
+        <h3>One-time license</h3>
+        <p class="price">$199<span> · flat</span></p>
+        <p class="price-sub">One payment, perpetual use of the licensed version, plus your ephemeral workstation host. No subscription, no renewals.</p>
+        <a class="btn btn-primary" data-press href="https://buy.stripe.com/test_dRmeVfgCRgnU40k5CjeIw01">Buy once →</a>
+      </div>
+    </div>
+    <p class="checkout-note">Payments handled by Stripe. Card, Apple&nbsp;Pay, Cash&nbsp;App&nbsp;Pay, and more. Licensing questions: <a href="mailto:TariqChehardy@gmail.com">TariqChehardy@gmail.com</a>.</p>
   </div>
 </section>
 
