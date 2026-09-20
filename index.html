@@ -16,8 +16,14 @@
 [data-press]:active{transition-duration:.12s,var(--t-colour),var(--t-colour);scale:.97}
 @media(prefers-reduced-motion:reduce){[data-press]:active{opacity:.8;scale:1}}
 .skillfile{border-radius:24px}
-.install{height:36px;display:inline-flex;align-items:center;gap:9px;padding:0 6px 0 13px;margin:0 0 34px;max-width:100%;font-family:var(--mono);font-size:13px;color:var(--ink);background:#101010;border-radius:980px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.1),0 6px 16px -8px rgba(0,0,0,.6)}
-.install .s{color:#777;user-select:none}
+.install{position:relative;height:46px;display:inline-flex;align-items:center;gap:12px;padding:0 8px 0 18px;margin:0 0 38px;max-width:100%;font-family:var(--mono);font-size:13.5px;color:#e8e8ea;background:linear-gradient(180deg,#141418,#0b0b0d);border:1px solid #34343c;border-radius:980px;box-shadow:0 14px 38px -16px rgba(0,0,0,.7),0 0 22px -6px rgba(41,151,255,.18);overflow:hidden;transition:transform .25s var(--ease),border-color .25s,box-shadow .25s}
+.install:before{content:"";position:absolute;inset:-70% -35%;background:radial-gradient(circle at 30% 0%,rgba(41,151,255,.16),transparent 55%);pointer-events:none;animation:installGlow 4.5s ease-in-out infinite}
+@keyframes installGlow{0%,100%{opacity:.55}50%{opacity:1}}
+.install:hover{transform:translateY(-1px);border-color:#4d4d59;box-shadow:0 16px 42px -16px rgba(0,0,0,.75),0 0 30px -4px rgba(41,151,255,.34)}
+.install .s{color:var(--blue);user-select:none;font-weight:600}
+.install .i-cursor{display:inline-block;width:7px;height:15px;background:var(--blue);margin-left:4px;vertical-align:-2px;border-radius:1px;animation:blink 1s step-end infinite;user-select:none}
+.install .copy{height:30px;padding:0 13px;color:#b9b9c0;background:#1c1c20;box-shadow:inset 0 0 0 1px rgba(255,255,255,.09)}
+.install .copy:hover{color:#fff;background:#26262c}
 .install .copy .faces,.install .copy .face{user-select:none;-webkit-user-select:none}
 .install .cmd{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .copy,.replay{border:0;cursor:pointer;height:24px;display:inline-flex;align-items:center;justify-content;gap:6px;padding:0 11px;border-radius:980px;font:inherit;font-family:var(--mono);font-size:12px;font-weight:500;color:#a1a1a6;background:#1a1a1a;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);transition:background-color var(--t-colour) var(--ease),color var(--t-colour) var(--ease);white-space:nowrap}
@@ -171,7 +177,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
       <a class="btn btn-primary" data-press href="https://github.com/pokedot-ai/poke-core">View on GitHub →</a>
       <a class="btn btn-ghost" data-press href="#toolset">See the toolset</a>
     </div>
-    <div class="install"><span class="s">$</span><span class="cmd">git clone https://github.com/pokedot-ai/poke-core.git</span><button class="copy" type="button" data-copy="git clone https://github.com/pokedot-ai/poke-core.git" aria-label="Copy clone command"><span class="faces"><span class="face">copy</span><span class="face face-in">copied</span></span></button></div>
+    <div class="install"><span class="s">$</span><span class="cmd">git clone https://github.com/pokedot-ai/poke-core.git</span><span class="i-cursor" aria-hidden="true"></span><button class="copy" type="button" data-copy="git clone https://github.com/pokedot-ai/poke-core.git" aria-label="Copy clone command"><span class="faces"><span class="face">copy</span><span class="face face-in">copied</span></span></button></div>
 
     <div class="terminal" role="img" aria-label="Terminal output showing poke compiling itself from its skill file">
       <div class="term-bar">
